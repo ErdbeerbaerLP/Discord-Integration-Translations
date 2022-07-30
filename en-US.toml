@@ -181,9 +181,9 @@ bot = "This user is an bot"
   # Sent when attempting to whitelist-link with an non uuid string
   # PLACEHOLDERS:
   # %arg% - The provided argument
-  link_argumentNotUUID = "Argument \"%arg%\" is not an valid UUID or Name. Use `/whitelist <Name-or-UUID>`"
+  link_argumentNotUUID = "Argument \"%arg%\" is not an valid UUID or Name."
   # Sent when attempting to link with an unknown number
-  invalidLinkNumber = "Invalid link number! Use `/discord link` ingame to get your link number"
+  invalidLinkNumber = "Invalid link number!"
   # Sent when attempting to link with an invalid number
   linkNumberNAN = "This is not a number!"
   # Message shown to players who are not whitelisted using discord
