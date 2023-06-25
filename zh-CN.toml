@@ -1,0 +1,234 @@
+# This is what will be displayed ingame when someone types into the bot's channel
+# PLACEHOLDERS:
+# %user% - The username
+# %id% - The user ID
+# %msg% - The message
+ingame_discordMessage = "§6[§5DISCORD§6]§r <%user%> %msg%"
+# This is what will be displayed ingame when someone sends an reply into the bot's channel
+# PLACEHOLDERS:
+# %user% - The username
+# %id% - The user ID
+# %msg% - The reply message
+# %ruser% - The username of the message that got the reply
+# %rmsg% - The replied message
+ingame_discordReplyMessage = "§6[§5DISCORD§6]§r §a%user%§r 回复 §3%ruser%§r: %msg%"
+# Message shown when hovering over the username of an discord message
+# PLACEHOLDERS:
+# %user% - The username/nickname (Someone123)
+# %user#tag% - The username with tag (someone#0001)
+# %id% - The user ID
+# 
+# NOTE: using an @ here can cause ping sounds ingame
+discordUserHover = "§3Discord User %user#tag%\n§a 点了回复"
+# This message will edited in / sent when the server finished starting
+serverStarted = "服务器启动！"
+# Message to show while the server is starting
+# This will be edited to SERVER_STARTED_MSG when webhook is false
+serverStarting = "服务器启动中......"
+# This message will be sent when the server was stopped
+serverStopped = "服务器关闭！"
+# The message to print to discord when it was possible to detect a server crash
+serverCrash = "检测到服务器崩溃：思考："
+# Gets sent when an player joins
+# 
+# PLACEHOLDERS:
+# %player% - The player's name
+playerJoin = "%player% 加入了游戏"
+# Gets sent when an player leaves
+# 
+# PLACEHOLDERS:
+# %player% - The player's name
+playerLeave = "%player% 离开了游戏"
+# Gets sent when an player dies
+# 
+# PLACEHOLDERS:
+# %player% - The player's name
+# %msg% - The death message
+playerDeath = "%player% %msg%"
+# Message sent instead of playerLeave, when the player times out
+# 
+# PLACEHOLDERS:
+# %player% - The player's name
+playerTimeout = "%player% 连接超时！"
+# Gets sent when an player finishes an advancement
+# Supports MulitLined messages using \n
+# 
+# PLACEHOLDERS:
+# %player% - The player's name
+# %name% - The advancement name
+# %desc% - The advancement description
+advancementMessage = "%player% 获得成就 **%name%**\n_%desc%_"
+# The chat message in discord, sent from an player in-game
+# 
+# PLACEHOLDERS:
+# %player% - The player's name
+# %msg% - The chat message
+discordChatMessage = "%player%: %msg%"
+# Sent to a player when someone reacts to his messages
+# PLACEHOLDERS:
+# %name% - (Nick-)Name of the user who reacted (format: 'SomeNickName')
+# %name2% - Name of the user who reacted with discord discriminator (format: 'SomeName#0123')
+# %msg% - Content of the message which got the reaction
+# %emote% - The reacted emote
+reactionMessage = "§6[§5DISCORD§6]§r§7 %name% 对你的消息做出了 '%emote%' 回复 \"§9%msg%§7\" "
+# Message shown for attachments
+attachment = "附件"
+# Message shown for stickers
+sticker = "贴纸"
+# Header for Embeds
+embed = "标题"
+# Message shown for embed images
+embedImage = "图片"
+# Message shown for embed messages
+embedMessage = "信息"
+# Hover message for the bot tag ingame
+bot = "这个用户是一个bot"
+
+# Strings about the discord commands
+[commands]
+  # Shown in console when trying to use the discord command
+  ingameOnly = "此命令仅可在游戏中执行"
+  # Shown when successfully reloading the config file
+  configReloaded = "重新加载配置文件"
+  # Shown when an subcommand is disabled
+  subcommandDisabled = "此子命令被禁用！"
+  # Message sent when user does not have permission to run a command
+  noPermission = "你没有权限执行此命令！"
+  # Message sent when an invalid command was typed
+  # 
+  # PLACEHOLDERS:
+  unknownCommand = "未知命令，使用`/help`获取命令列表"
+  # Message if a player provides less arguments than required
+  notEnoughArguments = "参数不足"
+  # Message if a player provides too many arguments
+  tooManyArguments = "参数过多"
+  # Message if a player can not be found
+  # 
+  # PLACEHOLDERS:
+  # %player% - The player's name
+  playerNotFound = "无法找到 \"%player%\""
+  # The message for 'list' when no player is online
+  cmdList_empty = "无在线玩家......"
+  # The header for 'list' when one player is online
+  cmdList_one = "1名在线玩家："
+  # The header for 'list'
+  # PLACEHOLDERS:
+  # %amount% - The amount of players online
+  cmdList_header = "%amount%名在线玩具："
+  # Header of the help command
+  cmdHelp_header = "您在此频道中可用的命令:"
+  # Message sent when ignoring Discord messages
+  commandIgnore_ignore = "您现在正在忽略 Discord 消息!"
+  # Message sent when unignoring Discord messages
+  commandIgnore_unignore = "您不再忽略 Discord 消息!"
+  # Message sent when using the uptime command
+  # 
+  # PLACEHOLDERS:
+  # %uptime% - Uptime in uptime format, see uptimeFormat
+  cmdUptime_message = "服务器已运行%uptime%"
+  # The format of the uptime command
+  # For more help with the formatting visit https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/time/DurationFormatUtils.html
+  uptimeFormat = "dd '天' HH '小时' mm '分钟'"
+  # Shows when running slash commands as command response
+  executing = "执行..."
+  # Command argument description for the linkcheck command's Discord user parameter
+  cmdLinkcheck_userargDesc = "要查找discord用户"
+  # Command argument description for the linkcheck command's minecraft player parameter
+  cmdLinkcheck_mcargDesc = "通过Minecraft玩家的UUID或名称查找"
+  # Sent when checked user is not linked
+  cmdLinkcheck_notlinked = "此帐户未关联！"
+  # 
+  cmdLinkcheck_discordAcc = "Discord账号: "
+  cmdLinkcheck_minecraftAcc = "Minecraft账号: "
+  cmdLinkcheck_cannotGetPlayer = "获取玩家信息出错！ 也许您使用了无效的名称/UUID"
+  cmdSett_key = "Destination settings key"
+  cmdSett_val = "Settings value"
+  cmdSett_set = "Change an setting"
+  cmdSett_get = "Retrieve an setting value"
+
+    # Command descriptions
+    [commands.descriptions]
+      settings = "允许您编辑您的个人设置"
+      uptime = "显示服务器运行时间"
+      help = "查看命令列表"
+      list = "目前在线玩家"
+      link = "将您的 Discord 帐户与您的 Minecraft 帐户关联"
+      whitelist = "通过与 Discord 链接将您列入服务器白名单"
+      linkcheck = "显示有关链接的Discord用户或玩家信息"
+
+# Strings about the account linking feature
+[linking]
+  # Sent to the user when he linked his discord successfully
+  # PLACEHOLDERS:
+  # %player% - The in-game player name
+  linkSuccessful = "您的账户现在已与玩家 %player% 关联\n使用 /settings 查看和设置 用户特定设置"
+  # Sent to the user when linking fails
+  linkFailed = "帐户链接失败"
+  # Sent when an already linked user attempts to link an account
+  # PLACEHOLDERS:
+  # %player% - The in-game player name
+  alreadyLinked = "您的帐户已关联至%player%"
+  # Sent when attempting to use personal commands while not linked
+  # PLACEHOLDERS:
+  # %method% - The currently enabled method for linking
+  notLinked = "您的帐户未关联！%method%"
+  # Message of the link method in whitelist mode
+  # Used by %method% placeholder
+  linkMethodWhitelistCode = "加入服务器然后使用`/link <whitelist-code>`"
+  # Message of the link method in normal mode
+  # Used by %method% placeholder
+  linkMethodIngame = "在游戏中使用`/discord link`"
+  # Sent when attempting to whitelist-link with an non uuid string
+  # PLACEHOLDERS:
+  # %arg% - The provided argument
+  link_argumentNotUUID = "参数 \"%arg%\" 不是有效的 UUID 或名称。"
+  # Sent when attempting to link with an unknown number
+  invalidLinkNumber = "链接号无效！"
+  # Sent when attempting to link with an invalid number
+  linkNumberNAN = "这不是一个数字！"
+  # Message shown to players who are not whitelisted using discord
+  # No effect if discord whitelist is off
+  notWhitelistedCode = "§c您未列入白名单。\n加入 discord 服务器以获取更多信息\nhttps://discord.gg/someserver\n您的白名单代码是： §6%code%"
+  # Message shown to players who are whitelisted using discord but don't have the required role anymore
+  # No effect if discord whitelist is off
+  notWhitelistedRole = "§c你已被列入白名单，但你需要一个角色才能加入。\n有关详细信息，请参阅Discord频道"
+  # Sent when trying to link without an required role
+  link_requiredRole = "您需要有一个角色才能使用它"
+  # Sent when trying to link as an non-member
+  link_notMember = "您不是Discor频道的成员！"
+  # Sent to the user when he linked his discord successfully
+  # PLACEHOLDERS:
+  # %name% - The linked discord name
+  # %name#tag% - The linked discord name with tag
+  linkSuccessfulIngame = "您的帐户现已与%name#tag%关联"
+  # Message shown to players who want to link their discord account ingame
+  # 
+  # PLACEHOLDERS:
+  # %num% - The link number
+  linkMsgIngame = "将此命令发送到游戏内链接您的帐户：/link %num%\n此号码将在 10 分钟后过期"
+  # Shown when hovering over the link message
+  hoverMsg_copyClipboard = "点击复制此命令"
+
+# Strings about the personal settings feature
+[personalSettings]
+  # Message for getting an setting's value
+  personalSettingGet = "此设置的值为 `%bool%`"
+  # Sent when user sucessfully updates an prersonal setting
+  settingUpdateSuccessful = "更新设置成功"
+  # Header of the personal settings list
+  personalSettingsHeader = "个人设置列表:"
+  # Error message when providing an invalid personal setting name
+  invalidPersonalSettingKey = "`%key%` 不是一个有效的设置！"
+  settingsCommandUsage = "用法：\n\n/settings - 列出所有可用键\n/settings get <key> - 获取当前设置值\n/settings set <key> <value> - 设置设置值"
+  # Sent when setting an personal setting fails
+  settingUpdateFailed = "设置值失败:/"
+  # Sent when attempting to change an blacklisted setting
+  settingUpdateBlocked = "服务器所有者禁止更改此设置"
+
+    # Descriptions of the settings
+    [personalSettings.descriptons]
+      ignoreDiscordChatIngame = "配置是否要忽略游戏中的discord聊天"
+      useDiscordNameInChannel = "机器人是否应该使用您的 discord 名称和头像而不是您在游戏中的名称和皮肤来发送消息？"
+      ignoreReactions = "配置是否要忽略游戏中的discord贴纸回复"
+      pingSound = "切换游戏内的 ping"
+      hideFromDiscord = "将此设置为 true 将从 discord 中隐藏你所有的 minecraft 消息"
