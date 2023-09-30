@@ -3,7 +3,7 @@
 # %user% - The username
 # %id% - The user ID
 # %msg% - The message
-ingame_discordMessage = "§6[§5DISCORD§6]§r <%user%> %msg%"
+ingame_discordMessage = "§6[§#5865F2DISCORD§6]§r <%user%> %msg%"
 # This is what will be displayed ingame when someone sends an reply into the bot's channel
 # PLACEHOLDERS:
 # %user% - The username
@@ -11,15 +11,15 @@ ingame_discordMessage = "§6[§5DISCORD§6]§r <%user%> %msg%"
 # %msg% - The reply message
 # %ruser% - The username of the message that got the reply
 # %rmsg% - The replied message
-ingame_discordReplyMessage = "§6[§5DISCORD§6]§r §a%user%§r in reply to §3%ruser%§r: %msg%"
+ingame_discordReplyMessage = "§6[§#5865F2DISCORD§6]§r §a%user%§r in reply to §3%ruser%§r: %msg%"
 # Message shown when hovering over the username of an discord message
 # PLACEHOLDERS:
-# %user% - The username/nickname (Someone123)
-# %user#tag% - The username with tag (someone#0001)
+# %user% - The users display name (Someone123)
+# %user#tag% - The users username (@username) or user tag (User#0001)
 # %id% - The user ID
 # 
 # NOTE: using an @ here can cause ping sounds ingame
-discordUserHover = "§3Discord User %user#tag%\n§aClick to mention"
+discordUserHover = "§3Discord User %user%\n§aClick to mention"
 # This message will edited in / sent when the server finished starting
 serverStarted = "Server Started!"
 # Message to show while the server is starting
@@ -55,9 +55,9 @@ playerTimeout = "%player% timed out!"
 # 
 # PLACEHOLDERS:
 # %player% - The player's name
-# %name% - The advancement name
-# %desc% - The advancement description
-advancementMessage = "%player% just made the advancement **%name%**\n_%desc%_"
+# %advName% - The advancement name
+# %advDesc% - The advancement description
+advancementMessage = "%player% just made the advancement **%advName%**\n_%advDesc%_"
 # The chat message in discord, sent from an player in-game
 # 
 # PLACEHOLDERS:
@@ -70,7 +70,7 @@ discordChatMessage = "%player%: %msg%"
 # %name2% - Name of the user who reacted with discord discriminator (format: 'SomeName#0123')
 # %msg% - Content of the message which got the reaction
 # %emote% - The reacted emote
-reactionMessage = "§6[§5DISCORD§6]§r§7 %name% reacted to your message \"§9%msg%§7\" with '%emote%'"
+reactionMessage = "§6[§#5865F2DISCORD§6]§r§7 %name% reacted to your message \"§9%msg%§7\" with '%emote%'"
 # Message shown for attachments
 attachment = "Attachment"
 # Message shown for stickers
@@ -86,8 +86,10 @@ bot = "This user is an bot"
 
 # Strings about the discord commands
 [commands]
-  # Shown in console when trying to use the discord command
-  ingameOnly = "This command can only be executed ingame"
+  # Shown in console when trying to use a in-game only command
+  ingameOnly = "This command can only be executed ingame!"
+  # Shown in-game when trying to use a console only command
+  consoleOnly = "This command can only be executed from console!"
   # Shown when successfully reloading the config file
   configReloaded = "Config reloaded!"
   # Shown when an subcommand is disabled
@@ -140,6 +142,7 @@ bot = "This user is an bot"
   # 
   cmdLinkcheck_discordAcc = "Discord-Account: "
   cmdLinkcheck_minecraftAcc = "Minecraft Account: "
+  cmdLinkcheck_minecraftAccFloodgate = "Minecraft (Bedrock) UUID: "
   cmdLinkcheck_cannotGetPlayer = "Error getting player information! Maybe you used an invalid name / UUID"
   cmdSett_key = "Destination settings key"
   cmdSett_val = "Settings value"
