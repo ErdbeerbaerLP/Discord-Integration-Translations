@@ -55,9 +55,9 @@ playerTimeout = "%player% はタイムアウトしました！"
 #
 # PLACEHOLDERS:
 # %player% - プレイヤーの名前
-# %name% - アドバンスメントの名前
-# %desc% - アドバンスメントの説明
-advancementMessage = "%player% がアドバンスメント **%name%** を獲得しました\n_%desc%_"
+# %advName% - 進捗の名前
+# %advDesc% - 進捗の説明
+advancementMessage = "%player% が進捗 **%advName%** を達成しました \n_%advDesc%_"
 # ゲーム内のプレイヤーから送信されたチャットメッセージ
 #
 # PLACEHOLDERS:
