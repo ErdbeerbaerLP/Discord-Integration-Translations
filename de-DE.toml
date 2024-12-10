@@ -3,7 +3,7 @@
 # %user% - The username
 # %id% - The user ID
 # %msg% - The message
-ingame_discordMessage = "§6[§5DISCORD§6]§r <%user%> %msg%"
+ingame_discordMessage = "§6[§#5865F2DISCORD§6]§r <%user%> %msg%"
 # This is what will be displayed ingame when someone sends an reply into the bot's channel
 # PLACEHOLDERS:
 # %user% - The username
@@ -11,24 +11,24 @@ ingame_discordMessage = "§6[§5DISCORD§6]§r <%user%> %msg%"
 # %msg% - The reply message
 # %ruser% - The username of the message that got the reply
 # %rmsg% - The replied message
-ingame_discordReplyMessage = "§6[§5DISCORD§6]§r §a%user%§r als Antwort auf §3%ruser%§r: %msg%"
+ingame_discordReplyMessage = "§6[§#5865F2DISCORD§6]§r §a%user%§r als Antwort auf §3%ruser%§r: %msg%"
 # Message shown when hovering over the username of an discord message
 # PLACEHOLDERS:
-# %user% - The username/nickname (Someone123)
-# %user#tag% - The username with tag (someone#0001)
+# %user% - The users display name (Someone123)
+# %user#tag% - The users username (@username) or user tag (User#0001)
 # %id% - The user ID
 # 
 # NOTE: using an @ here can cause ping sounds ingame
-discordUserHover = "§3Discord Nutzer %user#tag%\n§aKlicken zum Erwähnen"
+discordUserHover = "§3Discord Nutzer %user%\n§aKlicken zum Erwähnen"
 # This message will edited in / sent when the server finished starting
-serverStarted = "Server Gestartet!"
+serverStarted = "Server gestartet!"
 # Message to show while the server is starting
 # This will be edited to SERVER_STARTED_MSG when webhook is false
-serverStarting = "Server Startet..."
+serverStarting = "Server startet..."
 # This message will be sent when the server was stopped
-serverStopped = "Server Gestoppt!"
+serverStopped = "Server gestoppt!"
 # The message to print to discord when it was possible to detect a server crash
-serverCrash = "Server Crash Erkannt :thinking:"
+serverCrash = "Server Crash erkannt :thinking:"
 # Gets sent when an player joins
 # 
 # PLACEHOLDERS:
@@ -55,9 +55,9 @@ playerTimeout = "Zeitüberschreitung von %player%!"
 # 
 # PLACEHOLDERS:
 # %player% - The player's name
-# %name% - The advancement name
-# %desc% - The advancement description
-advancementMessage = "%player% hat den Fortschritt **%name%** erreicht\n_%desc%_"
+# %advName% - The advancement name
+# %advDesc% - The advancement description
+advancementMessage = "%player% hat den Fortschritt **%advName%** erreicht:\n_%advDesc%_"
 # The chat message in discord, sent from an player in-game
 # 
 # PLACEHOLDERS:
@@ -70,7 +70,7 @@ discordChatMessage = "%player%: %msg%"
 # %name2% - Name of the user who reacted with discord discriminator (format: 'SomeName#0123')
 # %msg% - Content of the message which got the reaction
 # %emote% - The reacted emote
-reactionMessage = "§6[§5DISCORD§6]§r§7 %name% reagiert mit '%emote%' auf deine Nachricht \"§9%msg%§7\""
+reactionMessage = "§6[§#5865F2DISCORD§6]§r§7 %name% reagiert mit '%emote%' auf deine Nachricht \"§9%msg%§7\""
 # Message shown for attachments
 attachment = "Anhang"
 # Message shown for stickers
@@ -87,9 +87,9 @@ bot = "Dieser Nutzer ist ein Bot"
 # Strings about the discord commands
 [commands]
   # Shown in console when trying to use the discord command
-  ingameOnly = "Dieser Befehl kann nur ingame verwendet werden"
+  ingameOnly = "Dieser Befehl kann nur im Spiel verwendet werden!"
   # Shown when successfully reloading the config file
-  configReloaded = "Konfiguration neugeladen!"
+  configReloaded = "Konfiguration neu geladen!"
   # Shown when an subcommand is disabled
   subcommandDisabled = "Dieser Unterbefehl ist deaktiviert!"
   # Message sent when user does not have permission to run a command
@@ -128,11 +128,11 @@ bot = "Dieser Nutzer ist ein Bot"
   cmdUptime_message = "Der Server läuft seit %uptime%"
   # The format of the uptime command
   # For more help with the formatting visit https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/time/DurationFormatUtils.html
-  uptimeFormat = "dd 'Tagen' HH 'Stunden' mm 'Minuten'"
+  uptimeFormat = "dd 'Tagen,' HH 'Stunden und' mm 'Minuten'"
   # Shows when running slash commands as command response
   executing = "Führe aus..."
   # Command argument description for the linkcheck command's Discord user parameter
-  cmdLinkcheck_userargDesc = "Der zu überprüfende Discord user"
+  cmdLinkcheck_userargDesc = "Der zu überprüfende Discord Benutzer"
   # Command argument description for the linkcheck command's minecraft player parameter
   cmdLinkcheck_mcargDesc = "Zu überprüfende Minecraft UUID oder Name"
   # Sent when checked user is not linked
@@ -140,6 +140,7 @@ bot = "Dieser Nutzer ist ein Bot"
   # 
   cmdLinkcheck_discordAcc = "Discord-Account: "
   cmdLinkcheck_minecraftAcc = "Minecraft Account: "
+  cmdLinkcheck_minecraftAccFloodgate = "Minecraft (Bedrock) UUID: "
   cmdLinkcheck_cannotGetPlayer = "Fehler beim Abrufen von Spielerinformationen! Eventuell hast du einen falschen Namen / eine falsche UUID angegeben"
   cmdSett_key = "Ziel-Einstellungs-Schlüssel"
   cmdSett_val = "Einstellungswert"
@@ -148,30 +149,30 @@ bot = "Dieser Nutzer ist ein Bot"
 
     # Command descriptions
     [commands.descriptions]
-      settings = "Erlaubt das bearbeiten der Persönlichen Einstellungen"
-      uptime = "Zeigt die uptime des Servers"
+      settings = "Erlaubt das bearbeiten der persönlichen Einstellungen"
+      uptime = "Zeigt die Betriebszeit des Servers"
       help = "Zeigt eine Liste aller Befehle"
       list = "Zeigt eine Liste aller Spieler, die gerade online sind"
-      link = "Verknüpft deinen Discord Account mit deinem Minecraft Account"
-      whitelist = "Setzt dich auf die Whitelist durch das Verknüpfen deines Discord Accounts"
-      linkcheck = "Zeigt Informationen über einen Verknüpften Spieler oder Discord Nutzer"
+      link = "Verknüpft dein Discord Konto mit deinem Minecraft Konto"
+      whitelist = "Setzt dich auf die Whitelist durch das Verknüpfen deines Discord Kontos"
+      linkcheck = "Zeigt Informationen über einen verknüpften Spieler oder Discord Nutzer"
 
 # Strings about the account linking feature
 [linking]
   # Sent to the user when he linked his discord successfully
   # PLACEHOLDERS:
   # %player% - The in-game player name
-  linkSuccessful = "Dein Account ist jetzt mit %player% verknüpft.\nBenutze /settings um deine Persönlichen Einstellungen zu verwalten"
+  linkSuccessful = "Dein Konto ist jetzt mit %player% verknüpft.\nBenutze /settings um deine persönlichen Einstellungen zu verwalten"
   # Sent to the user when linking fails
   linkFailed = "Verknüpfung fehlgeschlagen"
   # Sent when an already linked user attempts to link an account
   # PLACEHOLDERS:
   # %player% - The in-game player name
-  alreadyLinked = "Dein Account ist bereits mit %player% verknüpft"
+  alreadyLinked = "Dein Konto ist bereits mit %player% verknüpft"
   # Sent when attempting to use personal commands while not linked
   # PLACEHOLDERS:
   # %method% - The currently enabled method for linking
-  notLinked = "Dein Account ist nicht verknüpft! Verknüpfe ihn, indem du %method%"
+  notLinked = "Dein Konto ist nicht verknüpft! Verknüpfe ihn, indem du %method%"
   # Message of the link method in whitelist mode
   # Used by %method% placeholder
   linkMethodWhitelistCode = "den Server betrittst und `/link <whitelist-code>` hier verwendest"
@@ -200,12 +201,12 @@ bot = "Dieser Nutzer ist ein Bot"
   # PLACEHOLDERS:
   # %name% - The linked discord name
   # %name#tag% - The linked discord name with tag
-  linkSuccessfulIngame = "Dein Account ist jetzt mit Discord-Nutzer %name#tag% verknüpft"
+  linkSuccessfulIngame = "Dein Konto ist jetzt mit Discord-Nutzer %name#tag% verknüpft"
   # Message shown to players who want to link their discord account ingame
   # 
   # PLACEHOLDERS:
   # %num% - The link number
-  linkMsgIngame = "Sende diesen Befehl in den Server channel zum Verknüpfen: /link cdoe:%num%\nDieser Code läuft nach 10 minuten ab"
+  linkMsgIngame = "Sende diesen Befehl in den Server Kanal zum Verknüpfen: /link %num%\nDieser Code läuft nach 10 minuten ab"
   # Shown when hovering over the link message
   hoverMsg_copyClipboard = "Klicken, um Befehl zu Kopieren"
 
@@ -223,12 +224,12 @@ bot = "Dieser Nutzer ist ein Bot"
   # Sent when setting an personal setting fails
   settingUpdateFailed = "Wert konnte nicht gesetzt werden :/"
   # Sent when attempting to change an blacklisted setting
-  settingUpdateBlocked = "Der Serverbesitzer hat das Umstellen dieser Einstellung deaktiviert"
+  settingUpdateBlocked = "Der Serverbesitzer hat das Umstellen dieser Einstellung deaktiviert!"
 
     # Descriptions of the settings
     [personalSettings.descriptons]
-      ignoreDiscordChatIngame = "Bestimme, ob du Discord-Nachrichten ingame ignorieren willst"
-      useDiscordNameInChannel = "Soll der Bot deinen Discord-Namen und Avatar anstelle des Ingame-Namens und Skins verwenden?"
-      ignoreReactions = "Bestimme, ob du reaktionen ingame ignorieren willst"
-      pingSound = "Schalte dein In-Game erwähnungssound um"
-      hideFromDiscord = "Das aktivieren dieser Einstellung versteckt deine In-Game aktivität von Discord"
+      ignoreDiscordChatIngame = "Bestimme, ob du Discord-Nachrichten im Spiel ignorieren willst"
+      useDiscordNameInChannel = "Soll der Bot deinen Discord-Namen und Avatar anstelle des Spiel-Namens und Skins verwenden?"
+      ignoreReactions = "Bestimme, ob du Reaktionen im Spiel ignorieren willst"
+      pingSound = "Schalte deine Im-Spiel Erwähnungsbenachrichtigung um"
+      hideFromDiscord = "Das Aktivieren dieser Einstellung versteckt deine Spiel-Aktivität von Discord"
