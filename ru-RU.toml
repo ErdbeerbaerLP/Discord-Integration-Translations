@@ -57,7 +57,7 @@ playerTimeout = "%player% потерял соединение!"
 # %player% - The player's name
 # %name% - The advancement name
 # %desc% - The advancement description
-advancementMessage = "%player% получил ачивку **%name%**\n_%desc%_"
+advancementMessage = "%player% получил ачивку **%name%**\n_%advDesc%_"
 # The chat message in discord, sent from an player in-game
 # 
 # PLACEHOLDERS:
