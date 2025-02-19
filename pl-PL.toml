@@ -26,7 +26,7 @@ serverStarted = "Serwer uruchomiony!"
 # This will be edited to SERVER_STARTED_MSG when webhook is false
 serverStarting = "Serwer startuje..."
 # This message will be sent when the server was stopped
-serverStopped = "Server zatrzymany!"
+serverStopped = "Serwer zatrzymany!"
 # The message to print to discord when it was possible to detect a server crash
 serverCrash = "Serwer się scrashował :thinking:"
 # Gets sent when an player joins
