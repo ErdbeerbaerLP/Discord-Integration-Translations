@@ -1,0 +1,237 @@
+# This is what will be displayed ingame when someone types into the bot's channel
+# PLACEHOLDERS:
+# %user% - The username
+# %id% - The user ID
+# %msg% - The message
+ingame_discordMessage = "§6[§#5865F2DISCORD§6]§r <%user%> %msg%"
+# This is what will be displayed ingame when someone sends an reply into the bot's channel
+# PLACEHOLDERS:
+# %user% - The username
+# %id% - The user ID
+# %msg% - The reply message
+# %ruser% - The username of the message that got the reply
+# %rmsg% - The replied message
+ingame_discordReplyMessage = "§6[§#5865F2DISCORD§6]§r §a%user%§r w odpowiedzi do §3%ruser%§r: %msg%"
+# Message shown when hovering over the username of an discord message
+# PLACEHOLDERS:
+# %user% - The users display name (Someone123)
+# %user#tag% - The users username (@username) or user tag (User#0001)
+# %id% - The user ID
+# 
+# NOTE: using an @ here can cause ping sounds ingame
+discordUserHover = "Użytkownik §3Discord %user%\n§aKliknij, by odpowiedzieć"
+# This message will edited in / sent when the server finished starting
+serverStarted = "Serwer uruchomiony!"
+# Message to show while the server is starting
+# This will be edited to SERVER_STARTED_MSG when webhook is false
+serverStarting = "Serwer startuje..."
+# This message will be sent when the server was stopped
+serverStopped = "Serwer zatrzymany!"
+# The message to print to discord when it was possible to detect a server crash
+serverCrash = "Serwer się scrashował :thinking:"
+# Gets sent when an player joins
+# 
+# PLACEHOLDERS:
+# %player% - The player's name
+playerJoin = "%player% dołączył"
+# Gets sent when an player leaves
+# 
+# PLACEHOLDERS:
+# %player% - The player's name
+playerLeave = "%player% wyszedł"
+# Gets sent when an player dies
+# 
+# PLACEHOLDERS:
+# %player% - The player's name
+# %msg% - The death message
+playerDeath = "%player% %msg%"
+# Message sent instead of playerLeave, when the player times out
+# 
+# PLACEHOLDERS:
+# %player% - The player's name
+playerTimeout = "%player% przekroczył czas połączenia!"
+# Gets sent when an player finishes an advancement
+# Supports MulitLined messages using \n
+# 
+# PLACEHOLDERS:
+# %player% - The player's name
+# %advName% - The advancement name
+# %advDesc% - The advancement description
+advancementMessage = "%player% odblokował osiągnięcie **%advName%**\n_%advDesc%_"
+# The chat message in discord, sent from an player in-game
+# 
+# PLACEHOLDERS:
+# %player% - The player's name
+# %msg% - The chat message
+discordChatMessage = "%player%: %msg%"
+# Sent to a player when someone reacts to his messages
+# PLACEHOLDERS:
+# %name% - (Nick-)Name of the user who reacted (format: 'SomeNickName')
+# %name2% - Name of the user who reacted with discord discriminator (format: 'SomeName#0123')
+# %msg% - Content of the message which got the reaction
+# %emote% - The reacted emote
+reactionMessage = "§6[§#5865F2DISCORD§6]§r§7 %name% zareagował na \"§9%msg%§7\" emotką '%emote%'"
+# Message shown for attachments
+attachment = "Załącznik"
+# Message shown for stickers
+sticker = "Naklejka"
+# Header for Embeds
+embed = "Treść osadzona"
+# Message shown for embed images
+embedImage = "Obraz"
+# Message shown for embed messages
+embedMessage = "Wiadomość"
+# Hover message for the bot tag ingame
+bot = "Ten użytkownik to bot"
+
+# Strings about the discord commands
+[commands]
+  # Shown in console when trying to use a in-game only command
+  ingameOnly = "Ta komenda może być tylko wykonana w grze!"
+  # Shown in-game when trying to use a console only command
+  consoleOnly = "Ta komenda może być tylko wykonana w konsoli serwera!"
+  # Shown when successfully reloading the config file
+  configReloaded = "Konfiguracja przeładowana!"
+  # Shown when an subcommand is disabled
+  subcommandDisabled = "Ta podkomenda jest wyłączona!"
+  # Message sent when user does not have permission to run a command
+  noPermission = "Nie masz uprawnień by użyć tej komendy!"
+  # Message sent when an invalid command was typed
+  # 
+  # PLACEHOLDERS:
+  unknownCommand = "Nie znaleziono, wpisz `/help` by uzyskać listę dostępnych komend"
+  # Message if a player provides less arguments than required
+  notEnoughArguments = "Zbyt mało argumentów"
+  # Message if a player provides too many arguments
+  tooManyArguments = "Zbyt dużo argumentów"
+  # Message if a player can not be found
+  # 
+  # PLACEHOLDERS:
+  # %player% - The player's name
+  playerNotFound = "Nie można znaleźć gracza \"%player%\""
+  # The message for 'list' when no player is online
+  cmdList_empty = "Brak graczy online..."
+  # The header for 'list' when one player is online
+  cmdList_one = "Jest 1 gracz online:"
+  # The header for 'list'
+  # PLACEHOLDERS:
+  # %amount% - The amount of players online
+  cmdList_header = "Jest %amount% graczy online:"
+  # Header of the help command
+  cmdHelp_header = "Twoje dostępne komendy na tym kanale:"
+  # Message sent when ignoring Discord messages
+  commandIgnore_ignore = "Zignorowałeś dalsze wiadomości z Discorda!"
+  # Message sent when unignoring Discord messages
+  commandIgnore_unignore = "Wyłączyłeś ignorowanie Discorda!"
+  # Message sent when using the uptime command
+  # 
+  # PLACEHOLDERS:
+  # %uptime% - Uptime in uptime format, see uptimeFormat
+  cmdUptime_message = "Serwer działa od %uptime%"
+  # The format of the uptime command
+  # For more help with the formatting visit https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/time/DurationFormatUtils.html
+  uptimeFormat = "dd 'dni' HH 'godzin' mm 'minut'"
+  # Shows when running slash commands as command response
+  executing = "Wykonywanie..."
+  # Command argument description for the linkcheck command's Discord user parameter
+  cmdLinkcheck_userargDesc = "Użytkownik Discorda do sprawdzenia"
+  # Command argument description for the linkcheck command's minecraft player parameter
+  cmdLinkcheck_mcargDesc = "Nazwa lub UUID profilu Minecraft do sprawdzenia"
+  # Sent when checked user is not linked
+  cmdLinkcheck_notlinked = "To konto nie jest powiązane!"
+  # 
+  cmdLinkcheck_discordAcc = "Konto-Discord: "
+  cmdLinkcheck_minecraftAcc = "Konto Minecraft: "
+  cmdLinkcheck_minecraftAccFloodgate = "Minecraft (Bedrock) UUID: "
+  cmdLinkcheck_cannotGetPlayer = "Błąd w pozyskaniu informacji o graczu! Sprawdź poprawność nazwy / UUID"
+  cmdSett_key = "Ustawienie do zmiany"
+  cmdSett_val = "Wartość ustawienia"
+  cmdSett_set = "Zmień ustawienie"
+  cmdSett_get = "Odczytaj wartość ustawienia"
+
+    # Command descriptions
+    [commands.descriptions]
+      settings = "Pozwala na dostosowanie swoich ustawień personalnych"
+      uptime = "Wyświetla czas działania serwera"
+      help = "Wyświetla listę wszystkich dostępnych komend"
+      list = "Wyświetla listę wszystkich graczy online"
+      link = "Powiązuje twój profil Discord z profilem Minecraft"
+      whitelist = "Dodaje na whitelistę poprzez powiązanie z Discordem"
+      linkcheck = "Pokazuje informacje o powiązanym koncie Discord lub graczu Minecraft"
+
+# Strings about the account linking feature
+[linking]
+  # Sent to the user when he linked his discord successfully
+  # PLACEHOLDERS:
+  # %player% - The in-game player name
+  linkSuccessful = "Twoje konto zostało powiązane z %player%.\nUżyj /settings by wyświetlić i ustawić niektóre opcje dotyczące konta"
+  # Sent to the user when linking fails
+  linkFailed = "Powiązanie nie powiodło się"
+  # Sent when an already linked user attempts to link an account
+  # PLACEHOLDERS:
+  # %player% - The in-game player name
+  alreadyLinked = "Twoje konto jest aktualnie powiązane z %player%"
+  # Sent when attempting to use personal commands while not linked
+  # PLACEHOLDERS:
+  # %method% - The currently enabled method for linking
+  notLinked = "Twoje konto nie jest powiązane! Powiąż je %method% "
+  # Message of the link method in whitelist mode
+  # Used by %method% placeholder
+  linkMethodWhitelistCode = "dołączając na serwer i używając `/link <whitelist-code>`"
+  # Message of the link method in normal mode
+  # Used by %method% placeholder
+  linkMethodIngame = "`/discord link` w grze"
+  # Sent when attempting to whitelist-link with an non uuid string
+  # PLACEHOLDERS:
+  # %arg% - The provided argument
+  link_argumentNotUUID = "Podany argument \"%arg%\" jest niepoprawny, podaj UUID lub nazwę profilu Minecraft."
+  # Sent when attempting to link with an unknown number
+  invalidLinkNumber = "Nieznany numer powiązania!"
+  # Sent when attempting to link with an invalid number
+  linkNumberNAN = "Podano wartość, która nie jest liczbą!"
+  # Message shown to players who are not whitelisted using discord
+  # No effect if discord whitelist is off
+  notWhitelistedCode = "§cNie jesteś na białej liście.\nDołącz na serwer Discord po więcej informacji\nhttps://discord.gg/someserver\nTwój kod to: §6%code%"
+  # Message shown to players who are whitelisted using discord but don't have the required role anymore
+  # No effect if discord whitelist is off
+  notWhitelistedRole = "§cJesteś na białej liście, lecz potrzebujesz odpowiedniej roli by dołączyć.\nSprawdź serwer Discord po więcej informacji"
+  # Sent when trying to link without an required role
+  link_requiredRole = "Musisz mieć odpowiednią rolę do powiązania kont"
+  # Sent when trying to link as an non-member
+  link_notMember = "Nie jesteś na odpowiednim serwerze Discord by powiązać konta!"
+  # Sent to the user when he linked his discord successfully
+  # PLACEHOLDERS:
+  # %name% - The linked discord name
+  # %name#tag% - The linked discord name with tag
+  linkSuccessfulIngame = "Twój profil został powiązany z kontem Discord %name#tag%"
+  # Message shown to players who want to link their discord account ingame
+  # 
+  # PLACEHOLDERS:
+  # %num% - The link number
+  linkMsgIngame = "Użyj tej komendy na kanale serwera by powiązać swoje konta: /link %num%\nTen kod wygaśnie w przeciągu 10 minut"
+  # Shown when hovering over the link message
+  hoverMsg_copyClipboard = "Kliknij by skopiować do schowka"
+
+# Strings about the personal settings feature
+[personalSettings]
+  # Message for getting an setting's value
+  personalSettingGet = "Ta wartość wynosi `%bool%`"
+  # Sent when user sucessfully updates an prersonal setting
+  settingUpdateSuccessful = "Pomyślnie zaktualizowano ustawienia!"
+  # Header of the personal settings list
+  personalSettingsHeader = "Lista osobistych ustawień:"
+  # Error message when providing an invalid personal setting name
+  invalidPersonalSettingKey = "`Nie znaleziono: %key%`!"
+  settingsCommandUsage = "Przykłady:\n\n/settings - wyświetla wszystkie ustawienia\n/settings get <klucz> - Wyświetla aktualną wartość podanego ustawienia\n/settings set <klucz> <wartość> - Ustawia wartość dla podanego ustawienia"
+  # Sent when setting an personal setting fails
+  settingUpdateFailed = "Działanie nie powiodło się :/"
+  # Sent when attempting to change an blacklisted setting
+  settingUpdateBlocked = "Właściciel serwera wyłączył możliwość dostosowania tej opcji"
+
+    # Descriptions of the settings
+    [personalSettings.descriptons]
+      ignoreDiscordChatIngame = "Ustaw, by ignorować wiadomości Discord w grze"
+      useDiscordNameInChannel = "Ustaw, by przy wysyłaniu wiadomości wyświetlać się jako użytkownik Discorda, a nie poprzez nazwę i skórkę MC"
+      ignoreReactions = "Ustaw, by ignorować w grze powiadomienia o reakcjach"
+      pingSound = "Przełącz dźwięk reakcji"
+      hideFromDiscord = "Ustaw, by wyłączyć przesyłanie wiadomości na kanał Discord"
