@@ -1,0 +1,239 @@
+# This is what will be displayed in-game when someone types into the bots channel
+# PLACEHOLDERS:
+# %user% - The username
+# %id% - The user ID
+# %msg% - The message
+ingame_discordMessage = "§6[§#5865F2DISCORD§6]§r <%user%> %msg%"
+# This is what will be displayed in-game when someone sends an reply into the bots channel
+# PLACEHOLDERS:
+# %user% - The username
+# %id% - The user ID
+# %msg% - The reply message
+# %ruser% - The username of the message that got the reply
+# %rmsg% - The replied message
+ingame_discordReplyMessage = "§6[§#5865F2DISCORD§6]§r §a%user%§r відповідає на §3%ruser%§r: %msg%"
+# Message shown when hovering over the username of an discord message
+# PLACEHOLDERS:
+# %user% - The users display name (Someone123)
+# %user#tag% - The users username (@username) or user tag (User#0001)
+# %id% - The user ID
+# 
+# NOTE: using an @ here can cause ping sounds in-game
+discordUserHover = "§3Користувач %user%\n§aНатисніть, щоб гукнути"
+# This message will edited in / sent when the server finished starting
+serverStarted = "Сервер запущений!"
+# Message to show while the server is starting
+# This will be edited to SERVER_STARTED_MSG when webhook is false
+serverStarting = "Сервер запускається..."
+# This message will be sent when the server was stopped
+serverStopped = "Сервер зупинений!"
+# The message to print to discord when it was possible to detect a server crash
+serverCrash = "Сервер зламався :thinking:"
+# Gets sent when an player joins
+# 
+# PLACEHOLDERS:
+# %player% - The player's name
+playerJoin = "%player% приєднався до гри"
+# Gets sent when an player leaves
+# 
+# PLACEHOLDERS:
+# %player% - The player's name
+playerLeave = "%player% покинув гру"
+# Gets sent when an player dies
+# 
+# PLACEHOLDERS:
+# %player% - The player's name
+# %msg% - The death message
+playerDeath = "%player% %msg%"
+# Message sent instead of playerLeave, when the player times out
+# 
+# PLACEHOLDERS:
+# %player% - The player's name
+playerTimeout = "%player% викинуло!"
+# Gets sent when an player finishes an advancement
+# Supports MultiLined messages using \n
+# 
+# PLACEHOLDERS:
+# %player% - The player's name
+# %advName% - The advancement name
+# %advDesc% - The advancement description
+# %advNameURL% - The advancement name in an URL-Encoded form
+# %advDescURL% - The advancement description in an URL-Encoded form
+advancementMessage = "%player% отримав досягнення **%advName%**\n_%advDesc%_"
+# The chat message in discord, sent from an player in-game
+# 
+# PLACEHOLDERS:
+# %player% - The player's name
+# %msg% - The chat message
+discordChatMessage = "%player%: %msg%"
+# Sent to a player when someone reacts to his messages
+# PLACEHOLDERS:
+# %name% - (Nick-)Name of the user who reacted (format: 'SomeNickName')
+# %name2% - Name of the user who reacted with discord discriminator (format: 'SomeName#0123')
+# %msg% - Content of the message which got the reaction
+# %emote% - The reacted emote
+reactionMessage = "§6[§#5865F2DISCORD§6]§r§7 %name% відреагував до \"§9%msg%§7\" '%emote%'"
+# Message shown for attachments
+attachment = "Файл"
+# Message shown for stickers
+sticker = "Стікер"
+# Header for Embeds
+embed = "Ембед"
+# Message shown for embed images
+embedImage = "Картинка"
+# Message shown for embed messages
+embedMessage = "Повідомлення"
+# Hover message for the bot tag in-game
+bot = "Цей користувач є ботом"
+
+# Strings about the discord commands
+[commands]
+  # Shown in console when trying to use a in-game only command
+  ingameOnly = "Ця команда може бути виконана тільки у грі!"
+  # Shown in-game when trying to use a console only command
+  consoleOnly = "Ця команда може бути виконана тільки з консолі!"
+  # Shown when successfully reloading the config file
+  configReloaded = "Конфігурацію перезапущено!"
+  # Shown when an subcommand is disabled
+  subcommandDisabled = "Ця підкоманда вимкнена!"
+  # Message sent when user does not have permission to run a command
+  noPermission = "Ви не маєте права використовувати цю команду!"
+  # Message sent when an invalid command was typed
+  # 
+  # PLACEHOLDERS:
+  unknownCommand = "Невідома команда. Використайте /help для допомоги."
+  # Message if a player provides less arguments than required
+  notEnoughArguments = "Не достатньо аргументів"
+  # Message if a player provides too many arguments
+  tooManyArguments = "Перебільшення аргументів"
+  # Message if a player can not be found
+  # 
+  # PLACEHOLDERS:
+  # %player% - The player's name
+  playerNotFound = "Не можу знайти \"%player%\""
+  # The message for 'list' when no player is online
+  cmdList_empty = "Нема гравців онлайн..."
+  # The header for 'list' when one player is online
+  cmdList_one = "Один гравець онлайн: "
+  # The header for 'list'
+  # PLACEHOLDERS:
+  # %amount% - The amount of players online
+  cmdList_header = "%amount% гравців онлайн: "
+  # Header of the help command
+  cmdHelp_header = "Доступні команди в каналі:"
+  # Message sent when ignoring Discord messages
+  commandIgnore_ignore = "Тепер ти ігноруєш повідомлення в Discord!"
+  # Message sent when un-ignoring Discord messages
+  commandIgnore_unignore = "Ти більше не ігноруєш повідомлення в Discord!"
+  # Message sent when using the uptime command
+  # 
+  # PLACEHOLDERS:
+  # %uptime% - Uptime in uptime format, see uptimeFormat
+  cmdUptime_message = "Сервер працює %uptime%"
+  # The format of the uptime command
+  # For more help with the formatting visit https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/time/DurationFormatUtils.html
+  uptimeFormat = "dd 'днів' HH 'годин' mm 'хвилин'"
+  # Shows when running slash commands as command response
+  executing = "Виконую..."
+  # Command argument description for the linkcheck command's Discord user parameter
+  cmdLinkcheck_userargDesc = "Користувач для перевірки"
+  # Command argument description for the linkcheck command's minecraft player parameter
+  cmdLinkcheck_mcargDesc = "UUID або ім'я гравця для перевірки"
+  # Sent when checked user is not linked
+  cmdLinkcheck_notlinked = "Цей акаунт не підключений!"
+  # 
+  cmdLinkcheck_discordAcc = "Discord-акаунт: "
+  cmdLinkcheck_minecraftAcc = "Minecraft-акаунт: "
+  cmdLinkcheck_minecraftAccFloodgate = "Minecraft (Bedrock) UUID: "
+  cmdLinkcheck_cannotGetPlayer = "Помилка при пошуку гравця! Можливо, ти використав неправильне ім'я/UUID"
+  cmdSett_key = "Пункт призначення значення ключа"
+  cmdSett_val = "Значення параметру"
+  cmdSett_set = "Змінити параметр"
+  cmdSett_get = "Отримати значення параметру"
+
+    # Command descriptions
+    [commands.descriptions]
+      settings = "Дозволяє змінити персональні параметри"
+      uptime = "Показує час роботи сервера"
+      help = "Показує список доступних команд"
+      list = "Перераховує список гравців онлайн"
+      link = "Підключає діскорд-акаунт до майнкрафту"
+      whitelist = "Додає у білий список за допомогою підключення до діскорд-акаунт"
+      linkcheck = "Показує інформацію про підключеного користувача Discord, або гравця"
+
+# Strings about the account linking feature
+[linking]
+  # Sent to the user when he linked his discord successfully
+  # PLACEHOLDERS:
+  # %player% - The in-game player name
+  linkSuccessful = "Ваш акаунт тепер підключений до %player%.\nВикористовуйте /settings щоб подивитися або змінити параметри"
+  # Sent to the user when linking fails
+  linkFailed = "Підключення акаунту не вдалося"
+  # Sent when an already linked user attempts to link an account
+  # PLACEHOLDERS:
+  # %player% - The in-game player name
+  alreadyLinked = "Ваш акаунт вже підключений до %player%"
+  # Sent when attempting to use personal commands while not linked
+  # PLACEHOLDERS:
+  # %method% - The currently enabled method for linking
+  notLinked = "Ваш акаунт не підключений! Спочатку, %method%"
+  # Message of the link method in whitelist mode
+  # Used by %method% placeholder
+  linkMethodWhitelistCode = "зайдіть на сервер та використайте `/link <whitelist-code>`"
+  # Message of the link method in normal mode
+  # Used by %method% placeholder
+  linkMethodIngame = "використайте `/discord link` у грі"
+  # Sent when attempting to whitelist-link with an non uuid string
+  # PLACEHOLDERS:
+  # %arg% - The provided argument
+  link_argumentNotUUID = "Аргумент \"%arg%\" не є коректним UUID або ім'ям."
+  # Sent when attempting to link with an unknown number
+  invalidLinkNumber = "Невідоме значення підключення!"
+  # Sent when attempting to link with an invalid number
+  linkNumberNAN = "Не є числом!"
+  # Message shown to players who are not whitelisted using discord
+  # No effect if discord whitelist is off
+  notWhitelistedCode = "§cВи не знаходитеся у білому списку..\nЗайдіть на діскорд сервер для отримання інформації\nhttps://discord.gg/someserver\nВаш код: §6%code%"
+  # Message shown to players who are whitelisted using discord but don't have the required role anymore
+  # No effect if discord whitelist is off
+  notWhitelistedRole = "§cВи присутні у білому списку, але вам треба роль для приєднання.\nЗайдіть на діскорд сервер для отримання інформації."
+  # Sent when trying to link without an required role
+  link_requiredRole = "Ви повинні мати роль для цього!"
+  # Sent when trying to link as an non-member
+  link_notMember = "Ви не є учасником діскорд-серверу!"
+  # Sent to the user when he linked his discord successfully
+  # PLACEHOLDERS:
+  # %name% - The linked discord name
+  # %name#tag% - The linked discord name with tag
+  linkSuccessfulIngame = "Ваш акаунт тепер підключений до діскорд-користувача %name#tag%"
+  # Message shown to players who want to link their discord account in-game
+  # 
+  # PLACEHOLDERS:
+  # %num% - The link number
+  linkMsgIngame = "Відправте цю команду в діскорд-каналі: /link %num%\nЦе число буде видаленим через 10 хвилин."
+  # Shown when hovering over the link message
+  hoverMsg_copyClipboard = "Натисніть, щоб скопіювати"
+
+# Strings about the personal settings feature
+[personalSettings]
+  # Message for getting an setting's value
+  personalSettingGet = "Це значення є `%bool%`"
+  # Sent when user successfully updates an personal setting
+  settingUpdateSuccessful = "Параметр змінено!"
+  # Header of the personal settings list
+  personalSettingsHeader = "Список параметрів:"
+  # Error message when providing an invalid personal setting name
+  invalidPersonalSettingKey = "`%key%` не є коректним значенням!"
+  settingsCommandUsage = "Використання:\n\n/settings - перелічує всі доступні параметри\n/settings get <key> - Показує значення параметру\n/settings set <key> <value> - Ставить значення параметру"
+  # Sent when setting an personal setting fails
+  settingUpdateFailed = "Не вдалося поставити значення :/"
+  # Sent when attempting to change an blacklisted setting
+  settingUpdateBlocked = "Власник вимкнув використання цього параметру"
+
+    # Descriptions of the settings
+    [personalSettings.descriptons]
+      ignoreDiscordChatIngame = "Налаштуйте це, якщо хочете ігнорувати чат діскорду в грі"
+      useDiscordNameInChannel = "Чи може бот відправляти повідомлення, використовуючи ваше ім'я та аватар, замість вашого ім'я у грі та скін?"
+      ignoreReactions = "Налаштуйте це, якщо хочете ігнорувати реакції у грі"
+      pingSound = "Перемкнути звук пінгу у грі"
+      hideFromDiscord = "Ставлячи значення на true ховає всі ваші повідомлення у грі з діскорд-чату"
