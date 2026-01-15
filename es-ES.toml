@@ -1,0 +1,237 @@
+# Esto es lo que se mostrará dentro del juego cuando alguien escriba en el canal del bot
+# MARCADORES:
+# %user% - El nombre de usuario
+# %id% - El ID del usuario
+# %msg% - El mensaje
+ingame_discordMessage = "§6[§#5865F2DISCORD§6]§r <%user%> %msg%"
+# Esto es lo que se mostrará dentro del juego cuando alguien envíe una respuesta en el canal del bot
+# MARCADORES:
+# %user% - El nombre de usuario
+# %id% - El ID del usuario
+# %msg% - El mensaje de respuesta
+# %ruser% - El nombre de usuario del mensaje que recibió la respuesta
+# %rmsg% - El mensaje respondido
+ingame_discordReplyMessage = "§6[§#5865F2DISCORD§6]§r §a%user%§r en respuesta a §3%ruser%§r: %msg%"
+# Mensaje mostrado al pasar el cursor sobre el nombre de usuario de un mensaje de discord
+# MARCADORES:
+# %user% - El nombre visible del usuario (Usuario123)
+# %user#tag% - El nombre de usuario (@usuario) o etiqueta de usuario (Usuario#0001)
+# %id% - El ID del usuario
+# 
+# NOTA: usar un @ aquí puede causar sonidos de mención dentro del juego
+discordUserHover = "§3Usuario de Discord %user%\n§aClic para mencionar"
+# Este mensaje será editado en / enviado cuando el servidor termine de iniciar
+serverStarted = "¡Servidor Iniciado!"
+# Mensaje para mostrar mientras el servidor está iniciando
+# Esto se editará a SERVER_STARTED_MSG cuando webhook esté en falso
+serverStarting = "Iniciando Servidor..."
+# Este mensaje se enviará cuando el servidor se haya detenido
+serverStopped = "¡Servidor Detenido!"
+# El mensaje para imprimir en discord cuando fue posible detectar una caída del servidor
+serverCrash = "Caída del Servidor Detectada :thinking:"
+# Se envía cuando un jugador se une
+# 
+# MARCADORES:
+# %player% - El nombre del jugador
+playerJoin = "%player% se unió"
+# Se envía cuando un jugador sale
+# 
+# MARCADORES:
+# %player% - El nombre del jugador
+playerLeave = "%player% salió"
+# Se envía cuando un jugador muere
+# 
+# MARCADORES:
+# %player% - El nombre del jugador
+# %msg% - El mensaje de muerte
+playerDeath = "%player% %msg%"
+# Mensaje enviado en lugar de playerLeave, cuando el jugador pierde la conexión por espera
+# 
+# MARCADORES:
+# %player% - El nombre del jugador
+playerTimeout = "¡%player% perdió la conexión!"
+# Se envía cuando un jugador completa un progreso/logro
+# Soporta mensajes multilínea usando \n
+# 
+# MARCADORES:
+# %player% - El nombre del jugador
+# %advName% - El nombre del progreso
+# %advDesc% - La descripción del progreso
+advancementMessage = "%player% acaba de conseguir el progreso **%advName%**\n_%advDesc%_"
+# El mensaje de chat en discord, enviado desde un jugador dentro del juego
+# 
+# MARCADORES:
+# %player% - El nombre del jugador
+# %msg% - El mensaje de chat
+discordChatMessage = "%player%: %msg%"
+# Enviado a un jugador cuando alguien reacciona a sus mensajes
+# MARCADORES:
+# %name% - (Apodo-)Nombre del usuario que reaccionó (formato: 'AlgúnApodo')
+# %name2% - Nombre del usuario que reaccionó con discriminador de discord (formato: 'Nombre#0123')
+# %msg% - Contenido del mensaje que recibió la reacción
+# %emote% - El emote reaccionado
+reactionMessage = "§6[§#5865F2DISCORD§6]§r§7 %name% reaccionó a tu mensaje \"§9%msg%§7\" con '%emote%'"
+# Mensaje mostrado para adjuntos
+attachment = "Adjunto"
+# Mensaje mostrado para stickers
+sticker = "Sticker"
+# Encabezado para Embeds
+embed = "Embed"
+# Mensaje mostrado para imágenes incrustadas (embed images)
+embedImage = "Imagen"
+# Mensaje mostrado para mensajes incrustados (embed messages)
+embedMessage = "Mensaje"
+# Mensaje al pasar el cursor por la etiqueta del bot dentro del juego
+bot = "Este usuario es un bot"
+
+# Cadenas de texto sobre los comandos de discord
+[commands]
+  # Mostrado en consola al intentar usar un comando exclusivo del juego
+  ingameOnly = "¡Este comando solo puede ejecutarse dentro del juego!"
+  # Mostrado en el juego al intentar usar un comando exclusivo de consola
+  consoleOnly = "¡Este comando solo puede ejecutarse desde la consola!"
+  # Mostrado al recargar exitosamente el archivo de configuración
+  configReloaded = "¡Configuración recargada!"
+  # Mostrado cuando un subcomando está deshabilitado
+  subcommandDisabled = "¡Este subcomando está deshabilitado!"
+  # Mensaje enviado cuando el usuario no tiene permiso para ejecutar un comando
+  noPermission = "¡No tienes permiso para ejecutar este comando!"
+  # Mensaje enviado cuando se escribe un comando inválido
+  # 
+  # MARCADORES:
+  unknownCommand = "Comando desconocido, intenta `/help` para ver una lista de comandos"
+  # Mensaje si un jugador proporciona menos argumentos de los requeridos
+  notEnoughArguments = "No hay suficientes argumentos"
+  # Mensaje si un jugador proporciona demasiados argumentos
+  tooManyArguments = "Demasiados argumentos"
+  # Mensaje si no se puede encontrar a un jugador
+  # 
+  # MARCADORES:
+  # %player% - El nombre del jugador
+  playerNotFound = "No se puede encontrar al jugador \"%player%\""
+  # El mensaje para 'list' cuando no hay jugadores en línea
+  cmdList_empty = "No hay jugadores en línea..."
+  # El encabezado para 'list' cuando hay un jugador en línea
+  cmdList_one = "Hay 1 jugador en línea:"
+  # El encabezado para 'list'
+  # MARCADORES:
+  # %amount% - La cantidad de jugadores en línea
+  cmdList_header = "Hay %amount% jugadores en línea:"
+  # Encabezado del comando de ayuda
+  cmdHelp_header = "Tus comandos disponibles en este canal:"
+  # Mensaje enviado al ignorar mensajes de Discord
+  commandIgnore_ignore = "¡Ahora estás ignorando los mensajes de Discord!"
+  # Mensaje enviado al dejar de ignorar mensajes de Discord
+  commandIgnore_unignore = "¡Ya no estás ignorando los mensajes de Discord!"
+  # Mensaje enviado al usar el comando uptime
+  # 
+  # MARCADORES:
+  # %uptime% - Tiempo de actividad en formato uptime, ver uptimeFormat
+  cmdUptime_message = "El servidor ha estado activo por %uptime%"
+  # El formato del comando uptime
+  # Para más ayuda con el formato visita https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/time/DurationFormatUtils.html
+  uptimeFormat = "dd 'días' HH 'horas' mm 'minutos'"
+  # Se muestra al ejecutar comandos de barra (slash commands) como respuesta del comando
+  executing = "Ejecutando..."
+  # Descripción del argumento del comando para el parámetro de usuario de Discord en linkcheck
+  cmdLinkcheck_userargDesc = "El usuario de discord a verificar"
+  # Descripción del argumento del comando para el parámetro de jugador de minecraft en linkcheck
+  cmdLinkcheck_mcargDesc = "El UUID o Nombre del jugador de minecraft a verificar"
+  # Enviado cuando el usuario verificado no está vinculado
+  cmdLinkcheck_notlinked = "¡Esta cuenta no está vinculada!"
+  # 
+  cmdLinkcheck_discordAcc = "Cuenta de Discord: "
+  cmdLinkcheck_minecraftAcc = "Cuenta de Minecraft: "
+  cmdLinkcheck_minecraftAccFloodgate = "UUID de Minecraft (Bedrock): "
+  cmdLinkcheck_cannotGetPlayer = "¡Error obteniendo información del jugador! Quizás usaste un nombre / UUID inválido"
+  cmdSett_key = "Clave de configuración de destino"
+  cmdSett_val = "Valor de configuración"
+  cmdSett_set = "Cambiar un ajuste"
+  cmdSett_get = "Recuperar un valor de ajuste"
+
+    # Descripciones de los comandos
+    [commands.descriptions]
+      settings = "Te permite editar tus ajustes personales"
+      uptime = "Muestra el tiempo de actividad del servidor"
+      help = "Muestra una lista de todos los comandos"
+      list = "Lista todos los jugadores actualmente en línea"
+      link = "Vincula tu cuenta de Discord con tu cuenta de Minecraft"
+      whitelist = "Te añade a la whitelist en el servidor vinculando con Discord"
+      linkcheck = "Muestra información sobre un usuario de discord vinculado o un jugador en el juego"
+
+# Cadenas de texto sobre la función de vinculación de cuentas
+[linking]
+  # Enviado al usuario cuando vinculó su discord exitosamente
+  # MARCADORES:
+  # %player% - El nombre del jugador en el juego
+  linkSuccessful = "Tu cuenta ahora está vinculada con %player%.\nUsa /settings para ver y establecer algunos ajustes específicos de usuario"
+  # Enviado al usuario cuando la vinculación falla
+  linkFailed = "Vinculación de cuenta fallida"
+  # Enviado cuando un usuario ya vinculado intenta vincular una cuenta
+  # MARCADORES:
+  # %player% - El nombre del jugador en el juego
+  alreadyLinked = "Tu cuenta ya está vinculada con %player%"
+  # Enviado al intentar usar comandos personales mientras no se está vinculado
+  # MARCADORES:
+  # %method% - El método habilitado actualmente para vincular
+  notLinked = "¡Tu cuenta no está vinculada! Vincúlala primero usando %method%"
+  # Mensaje del método de vinculación en modo whitelist
+  # Usado por el marcador %method%
+  linkMethodWhitelistCode = "uniéndote al servidor y luego usando `/link <código-whitelist>` aquí"
+  # Mensaje del método de vinculación en modo normal
+  # Usado por el marcador %method%
+  linkMethodIngame = "`/discord link` dentro del juego"
+  # Enviado al intentar vincular-whitelist con una cadena que no es un uuid
+  # MARCADORES:
+  # %arg% - El argumento proporcionado
+  link_argumentNotUUID = "El argumento \"%arg%\" no es un UUID o Nombre válido."
+  # Enviado al intentar vincular con un número desconocido
+  invalidLinkNumber = "¡Número de vinculación inválido!"
+  # Enviado al intentar vincular con un número inválido
+  linkNumberNAN = "¡Esto no es un número!"
+  # Mensaje mostrado a jugadores que no están en la whitelist usando discord
+  # Sin efecto si la whitelist de discord está apagada
+  notWhitelistedCode = "§cNo estás en la whitelist.\nÚnete al servidor de discord para más información\nhttps://discord.gg/tuserver\nTu Código de Whitelist es: §6%code%"
+  # Mensaje mostrado a jugadores que están en la whitelist usando discord pero ya no tienen el rol requerido
+  # Sin efecto si la whitelist de discord está apagada
+  notWhitelistedRole = "§cEstás en la whitelist, pero necesitas un rol para unirte.\nMira el servidor de discord para más información"
+  # Enviado al intentar vincular sin un rol requerido
+  link_requiredRole = "Necesitas tener un rol para usar esto"
+  # Enviado al intentar vincular como no-miembro
+  link_notMember = "¡No eres miembro del Servidor de Discord en el que opera este bot!"
+  # Enviado al usuario cuando vinculó su discord exitosamente
+  # MARCADORES:
+  # %name% - El nombre de discord vinculado
+  # %name#tag% - El nombre de discord vinculado con etiqueta
+  linkSuccessfulIngame = "Tu cuenta ahora está vinculada con el usuario de discord %name#tag%"
+  # Mensaje mostrado a jugadores que quieren vincular su cuenta de discord dentro del juego
+  # 
+  # MARCADORES:
+  # %num% - El número de vinculación
+  linkMsgIngame = "Envía este comando al canal del servidor para vincular tu cuenta: /link %num%\nEste número expirará en 10 minutos"
+  # Mostrado al pasar el cursor sobre el mensaje de vinculación
+  hoverMsg_copyClipboard = "Clic para copiar el comando al portapapeles"
+
+# Cadenas de texto sobre la función de ajustes personales
+[personalSettings]
+  # Mensaje para obtener el valor de un ajuste
+  personalSettingGet = "El valor de este ajuste es `%bool%`"
+  # Enviado cuando el usuario actualiza exitosamente un ajuste personal
+  settingUpdateSuccessful = "¡Ajuste actualizado exitosamente!"
+  # Encabezado de la lista de ajustes personales
+  personalSettingsHeader = "Lista de Ajustes Personales:"
+  # Mensaje de error al proporcionar un nombre de ajuste personal inválido
+  invalidPersonalSettingKey = "¡`%key%` no es un ajuste válido!"
+  settingsCommandUsage = "Usos:\n\n/settings - lista todas las claves disponibles\n/settings get <clave> - Obtiene el valor actual del ajuste\n/settings set <clave> <valor> - Establece un valor de Ajuste"
+  # Enviado cuando falla el establecer un ajuste personal
+  settingUpdateFailed = "Fallo al establecer el valor :/"
+  # Enviado al intentar cambiar un ajuste en la lista negra
+  settingUpdateBlocked = "El dueño del servidor deshabilitó el cambio de este ajuste"
+
+    # Descripciones de los ajustes
+    [personalSettings.descriptons]
+      ignoreDiscordChatIngame = "Configura si quieres ignorar el chat de discord dentro del juego"
+      useDiscordNameInChannel = "¿Debería el bot enviar mensajes usando tu nombre y avatar de discord en lugar de tu nombre y skin del juego?"
+      ignoreReactions = "Configura si quieres ignorar las reacciones de discord dentro del juego"
+      pingSound = "Alternar el sonido de ping dentro del juego"
+      hideFromDiscord = "Establecer esto en verdadero (true) ocultará todos tus mensajes de minecraft en discord"
