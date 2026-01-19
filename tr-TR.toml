@@ -1,0 +1,102 @@
+# Bu metin oyuncu ingame, bot kanalına yazı yazdığında gösterilecek
+# PLACEHOLDERS:
+# %user% - Kullanıcı adı
+# %id% - Kullanıcı ID
+# %msg% - Mesaj
+ingame_discordMessage = "§6[§#5865F2DISCORD§6]§r <%user%> %msg%"
+
+# Bu metin bot kanalına bir cevap gönderildiğinde gösterilecek
+# PLACEHOLDERS:
+# %user% - Gönderen kullanıcı adı
+# %id% - Gönderen kullanıcı ID
+# %msg% - Cevap mesajı
+# %ruser% - Cevaplanan kişinin adı
+# %rmsg% - Cevaplanan mesaj
+ingame_discordReplyMessage = "§6[§#5865F2DISCORD§6]§r §a%user%§r şuna cevap olarak §3%ruser%§r: %msg%"
+
+# Discord mesajı üzerine gelindiğinde gösterilen metin
+# PLACEHOLDERS:
+# %user% - Kullanıcının görüntü adı
+# %user#tag% - Kullanıcının tag’li adı
+# %id% - Kullanıcı ID
+discordUserHover = "§3Discord Kullanıcısı %user%\n§aBahsetmek için tıkla"
+
+serverStarted = "Sunucu başlatıldı!"
+serverStarting = "Sunucu başlatılıyor..."
+serverStopped = "Sunucu durduruldu!"
+serverCrash = "Sunucu çökmesi algılandı :thinking:"
+
+playerJoin = "%player% katıldı"
+playerLeave = "%player% ayrıldı"
+playerDeath = "%player% %msg%"
+playerTimeout = "%player% zaman aşımına uğradı!"
+
+advancementMessage = "%player% **%advName%** ilerlemesini tamamladı\n_%advDesc%_"
+
+discordChatMessage = "%player%: %msg%"
+
+reactionMessage = "§6[§#5865F2DISCORD§6]§r§7 %name% senin mesajına \"§9%msg%§7\" ile '%emote%' tepkisi verdi"
+
+attachment = "Ek"
+sticker = "Sticker"
+embed = "Gönderi"
+embedImage = "Resim"
+embedMessage = "Mesaj"
+
+ingameBot = "Bu kullanıcı bir bot"
+
+[commands]
+ingameOnly = "Bu komut sadece oyun içinden çalıştırılabilir!"
+consoleOnly = "Bu komut sadece konsoldan çalıştırılabilir!"
+configReloaded = "Yapılandırma yeniden yüklendi!"
+subcommandDisabled = "Bu alt komut devre dışı!"
+noPermission = "Bu komutu kullanma iznin yok!"
+unknownCommand = "Bilinmeyen komut. Liste için `/help` yazın"
+notEnoughArguments = "Yetersiz argüman"
+tooManyArguments = "Çok fazla argüman"
+playerNotFound = "\"%player%\" adlı oyuncu bulunamadı"
+cmdList_empty = "Şu anda çevrimiçi oyuncu yok..."
+cmdList_one = "1 oyuncu çevrimiçi:"
+cmdList_header = "%amount% oyuncu çevrimiçi:"
+cmdHelp_header = "Bu kanalda kullanılabilir komutlar:"
+commandIgnore_ignore = "Artık Discord mesajlarını görmezden geliyorsun!"
+commandIgnore_unignore = "Artık Discord mesajlarını görüyorsun!"
+cmdUptime_message = "Sunucu çalışma süresi: %uptime%"
+uptimeFormat = "dd 'gün' HH 'saat' mm 'dakika'"
+executing = "Çalıştırılıyor..."
+cmdLinkcheck_userargDesc = "Kontrol edilecek Discord kullanıcısı"
+cmdLinkcheck_mcargDesc = "Kontrol edilecek Minecraft oyuncu adı veya UUID"
+
+[linking]
+linkSuccessful = "Hesabınız %player% ile başarıyla bağlandı.\nAyarlar için /settings kullanabilirsiniz"
+linkFailed = "Hesap bağlama başarısız oldu"
+alreadyLinked = "Hesabınız zaten %player% ile bağlı"
+notLinked = "Hesabınız bağlı değil! Önce %method% ile bağlayın"
+linkMethodWhitelistCode = "sunucuya girip `/link` komutunu kullanma"
+linkMethodIngame = "oyun içinden `/discord link` komutunu kullanma"
+link_argumentNotUUID = "\"%arg%\" geçerli bir UUID veya isim değil"
+invalidLinkNumber = "Geçersiz link numarası!"
+linkNumberNAN = "Bu bir sayı değil!"
+
+notWhitelistedCode = "§cSunucu whitelist modunda.\nDiscord sunucusuna katılın https://discord.gg/UVTb2jdaSU\nWhitelist kodunuz: §6%code% Discorda bağlandıktan sonra herhangi bir kanala girip /link §6%code% yazınız."
+notWhitelistedRole = "§cWhitelist’siniz fakat gerekli role sahip değilsiniz"
+link_requiredRole = "Bu komut için gerekli role sahip olmalısınız"
+link_notMember = "Botun bulunduğu Discord sunucusunun üyesi değilsiniz!"
+
+linkSuccessfulIngame = "Hesabınız Discord kullanıcısı %name#tag% ile bağlandı"
+linkMsgIngame = "Discord kanalına şu komutu gönderin: /link %num%\nBu kod 10 dakika geçerlidir"
+hoverMsg_copyClipboard = "Panoya kopyalamak için tıkla"
+
+[personalSettings]
+personalSettingGet = "Bu ayarın değeri: `%bool%`"
+settingUpdateSuccessful = "Ayar başarıyla güncellendi!"
+settingUpdateFailed = "Ayar güncellenemedi"
+invalidPersonalSettingKey = "`%key%` geçerli bir ayar değil!"
+settingsCommandUsage = "Kullanım:\n/settings\n/settings get <ayar>\n/settings set <ayar> <değer>"
+
+[personalSettings.descriptions]
+ignoreDiscordChatIngame = "Oyun içinde Discord sohbetini gizle"
+useDiscordNameInChannel = "Discord adını ve avatarını oyun içinde kullan"
+ignoreReactions = "Oyun içi reaksiyonları gizle"
+pingSound = "Oyun içi ping sesini aç/kapat"
+hideFromDiscord = "Oyun içi mesajları Discord’dan gizle"
